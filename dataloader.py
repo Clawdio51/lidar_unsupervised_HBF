@@ -111,9 +111,9 @@ class LidarDataset2D(Dataset):
         return self.lidar_data[idx], self.beam_output[idx], self.channel[idx]
 
 if __name__ == '__main__':
-    lidar_data_path = 'N:\\Claudio\\Raymobtime\\Raymobtime Dataset and Scenarios\\Raymobtime_s008\\baseline_data\\lidar_input\\lidar_train.npz'
-    beam_data_path = 'N:\\Claudio\\Raymobtime\\Raymobtime Dataset and Scenarios\\Raymobtime_s008\\baseline_data\\beam_output\\beams_output_train.npz'
-    channel_data_path = 'N:\\Claudio\\Raymobtime\\Raymobtime Dataset and Scenarios\\Raymobtime_s008\\processed_raw_data\\myChannelInfo_train.npz'
+    lidar_data_path = 'lidar_train.npz'
+    beam_data_path = 'beams_output_train.npz'
+    channel_data_path = 'myChannelInfo_train.npz'
     dataset = LidarDataset2D(lidar_data_path, beam_data_path, channel_data_path)
     lidar, beam, channel = dataset[100]
     os.environ['KMP_DUPLICATE_LIB_OK']='True'
@@ -125,5 +125,5 @@ if __name__ == '__main__':
     }
     plt.rcParams.update(params)
     plt.imshow(lidar)
-    plt.savefig(r'\\hvclusterfs.grames.polymtl.ca\Usagers\Etudiants\clalk\Desktop\Figures\2d_LiDAR_transparent.png', transparent=True)
+    plt.savefig(r'2d_LiDAR_transparent.png', transparent=True)
     plt.show()
