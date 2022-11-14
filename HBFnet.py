@@ -250,7 +250,7 @@ if __name__ == '__main__':
         # torch.save(AP_model.state_dict(), AP_model_path)
 
     from numpy import savez
-    file_path = 'N:\\Claudio\Raymobtime\\Raymobtime Dataset and Scenarios\\Raymobtime_s008\\results.npz'
+    file_path = 'results.npz'
     savez(file_path, train=train_accumulated_loss_per_epoch, val=val_accumulated_loss_per_epoch)
 
     sendNotification('Done Training', silent=False)
