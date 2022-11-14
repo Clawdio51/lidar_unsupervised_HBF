@@ -8,7 +8,6 @@ import requests
 
 from dataloader import LidarDataset2D
 from loss_functions import SumRate
-from HBF_unsupervised_lidar_raymobtime import initialize_codebook
 
 N = 24
 M = 10
