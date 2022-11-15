@@ -43,7 +43,7 @@ def sendNotification(text, silent=True):
     if sendProgressUpdate:
         token = 'xxxxxxxxxx:your_token'
         url = f'https://api.telegram.org/bot{token}'
-        params = {'chat_id':1388173517, 'text':text, 'disable_notification':silent}
+        params = {'chat_id':xxxxxxxxxx, 'text':text, 'disable_notification':silent}
         r = requests.get(url + '/sendMessage', params=params)
 
 class HBFnet(nn.Module):
